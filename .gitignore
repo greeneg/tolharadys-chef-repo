@@ -118,3 +118,5 @@ db/*.sqlite3
 
 # ## Office Temp Files
 # ~$*
+
+nodes
