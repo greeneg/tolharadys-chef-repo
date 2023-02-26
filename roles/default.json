@@ -8,11 +8,11 @@
     "override_attributes": {
     },
     "run_list": [
-        "authentication",
-        "mounts",
-        "networking",
-        "packages",
-        "security",
-        "services"
+        "authentication::default",
+        "mounts::default",
+        "networking::default",
+        "packages::default",
+        "security::default",
+        "services::default"
     ]
 }

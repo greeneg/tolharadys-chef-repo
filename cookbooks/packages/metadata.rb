@@ -3,7 +3,7 @@ maintainer 'Gary Greene'
 maintainer_email 'greeneg@tolharadys.net'
 license 'Apache-2.0'
 description 'Installs/Configures packages'
-version '0.1.0'
+version '0.1.4'
 chef_version '>= 16.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
