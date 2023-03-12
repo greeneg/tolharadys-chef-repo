@@ -1,7 +1,6 @@
 {
   "environment": "prod",
   "roles": [
-    "default",
-    "nameserver"
+    "default"
   ]
 }
