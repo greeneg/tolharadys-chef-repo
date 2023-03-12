@@ -113,7 +113,7 @@ default['packages']['opensuse']['15.4']['core']['repositories'] = [
     'main-oss',
     'main-oss_-_updates',
     'repo-backports-update',
-    'repo-sle-update.repo'
+    'repo-sle-update'
 ]
 default['packages']['opensuse']['15.4']['repo']['main-oss'] = {
     'name' => 'main-oss',
