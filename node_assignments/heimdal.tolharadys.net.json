@@ -1,0 +1,6 @@
+{
+  "environment": "prod",
+  "roles": [
+    "default"
+  ]
+}
