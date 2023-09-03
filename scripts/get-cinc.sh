@@ -89,6 +89,7 @@ limitations under the License.
 }
 
 function check_is_git_url {
+    true
 }
 
 function process_args {
@@ -141,15 +142,13 @@ function process_args {
 GIT_URL=
 
 # globals
-VERSION="1.0.0"
+VERSION="1.0.1"
 CA_API_URL="http://downloads.cinc.sh/api/v1/stable/cinc-auditor/versions"
 CA_FILES_BASE_URL="http://downloads.cinc.sh/files/stable/cinc-auditor"
 CINC_API_URL="http://downloads.cinc.sh/api/v1/stable/cinc/versions"
 CINC_FILES_BASE_URL="http://downloads.cinc.sh/files/stable/cinc"
 
 process_args "$@"
-
-exit $?
 
 # first, get the latest version of
 CA_VERSION_JSON=$(curl -s $CA_API_URL)
@@ -180,6 +179,8 @@ if [[ "${OS_FAMILY}" == "sles" ]]; then
 elif [[ "${OS_FAMILY}" == "debian" ]]; then
     curl -q --progress-bar -O "${CINC_FILES_BASE_URL}/${CINC_BUILD_NUM}/${OS_FAMILY}/${OS_SERIES}/cinc_${CINC_BUILD_NUM}-1_${HW_ARCH}.deb"
 fi
+
+exit $?
 
 echo "Installing packages..."
 if [[ "${OS_FAMILY}" == "sles" ]]; then
