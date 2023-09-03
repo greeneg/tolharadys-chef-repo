@@ -16,3 +16,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+service 'augenrules' do
+  action [:enable, :start]
+  subscribes :reload, 'file[/etc/audit/rules.d/audit.rules]', :immediately
+end
+
+service 'auditd' do
+  action [:enable, :start]
+  subscribes :reload, [
+    'file[/etc/audit/auditd.conf]',
+    'file[/etc/audit/plugins.d/af_unix.conf]',
+    'file[/etc/audit/plugins.d/au-remote.conf]',
+    'file[/etc/audit/plugins.d/audispd-zos-remote.conf]',
+    'file[/etc/audit/plugins.d/syslog.conf]'
+  ], :immediately
+end
