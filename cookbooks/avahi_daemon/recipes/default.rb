@@ -15,3 +15,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+if platform?('opensuseleap')
+  include_recipe 'avahi_daemon::install'
+  include_recipe 'avahi_daemon::configure'
+  include_recipe 'avahi_daemon::service'
+end

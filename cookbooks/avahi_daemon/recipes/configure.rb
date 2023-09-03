@@ -1,6 +1,6 @@
 #
-# Cookbook:: networking
-# Recipe:: default
+# Cookbook:: avahi_daemon
+# Recipe:: configure
 #
 # Copyright:: 2023, Gary Greene
 #
@@ -16,4 +16,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'avahi_daemon'
+template '/etc/avahi/avahi-daemon.conf' do
+  action :create
+  mode '0644'
+  owner 'root'
+  group 'root'
+  source 'avahi-daemon.conf.erb'
+  variables(
+    host_name: node['hostname'],
+    interface: node['avahi_daemon']['allow_interface']
+  )
+end

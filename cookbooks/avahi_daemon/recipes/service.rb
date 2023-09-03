@@ -1,6 +1,6 @@
 #
-# Cookbook:: networking
-# Recipe:: default
+# Cookbook:: avahi_daemon
+# Recipe:: service
 #
 # Copyright:: 2023, Gary Greene
 #
@@ -16,4 +16,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'avahi_daemon'
+srvcs = [
+  'avahi-daemon',
+  'avahi-dnsconfd'
+]
+
+srvcs.each do |s|
+  service s do
+    action [:enable, :start]
+    subscribes :reload, 'file[/etc/avahi/avahi-daemon.conf]', :immediately
+  end
+end

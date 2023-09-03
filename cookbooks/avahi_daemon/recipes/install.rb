@@ -1,6 +1,6 @@
 #
-# Cookbook:: networking
-# Recipe:: default
+# Cookbook:: avahi_daemon
+# Recipe:: install
 #
 # Copyright:: 2023, Gary Greene
 #
@@ -16,4 +16,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'avahi_daemon'
+pkgs = [
+  'avahi',
+  'avahi-autoipd',
+  'avahi-lang',
+  'avahi-utils'
+]
+
+pkgs.each do |p|
+  zypper_package p do
+    allow_downgrade false
+    ignore_failure true
+    action :install
+  end
+end
