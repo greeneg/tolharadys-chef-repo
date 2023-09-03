@@ -181,8 +181,6 @@ elif [[ "${OS_FAMILY}" == "debian" ]]; then
     curl -q --progress-bar -O "${CINC_FILES_BASE_URL}/${CINC_BUILD_NUM}/${OS_FAMILY}/${OS_SERIES}/cinc_${CINC_BUILD_NUM}-1_${HW_ARCH}.deb"
 fi
 
-exit $?
-
 echo "Installing packages..."
 if [[ "${OS_FAMILY}" == "sles" ]]; then
     rpm -Uvh *.rpm
