@@ -1,6 +1,6 @@
 #
 # Cookbook:: atd
-# Recipe:: default
+# Recipe:: service
 #
 # Copyright:: 2023, Gary Greene
 #
@@ -16,8 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if platform?('opensuseleap')
-    include_recipe 'atd::install'
-    include_recipe 'atd::configure'
-    include_recipe 'atd::service'
+service 'atd' do
+  action [:enable, :start]
+  subscribes :reload, 'file[/etc/at.deny]', :immediately
 end

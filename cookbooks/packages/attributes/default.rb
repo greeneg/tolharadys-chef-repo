@@ -101,7 +101,6 @@ default['packages']['opensuse']['15.4']['extended']['repositories'] = [
     'obs_-_Shells:Zsh-users:zsh-history-substring-search',
     'obs_-_Shells:Zsh-users:zsh-syntax-highlighting',
     'obs_-_System:PackageManager',
-    'obs_-_SystemManagement',
     'obs_-_Utilities',
     'obs_-_YaST:Head',
     'obs_-_Zypp:Head',

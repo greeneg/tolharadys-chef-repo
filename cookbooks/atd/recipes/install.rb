@@ -1,6 +1,6 @@
 #
 # Cookbook:: atd
-# Recipe:: default
+# Recipe:: install
 #
 # Copyright:: 2023, Gary Greene
 #
@@ -16,8 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if platform?('opensuseleap')
-    include_recipe 'atd::install'
-    include_recipe 'atd::configure'
-    include_recipe 'atd::service'
+zypper_package 'at' do
+  allow_downgrade false
+  ignore_failure true
+  action :install
 end
