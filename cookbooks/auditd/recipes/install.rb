@@ -1,6 +1,6 @@
 #
 # Cookbook:: auditd
-# Recipe:: default
+# Recipe:: install
 #
 # Copyright:: 2023, Gary Greene
 #
@@ -16,8 +16,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if platform?('opensuseleap')
-  include_recipe 'auditd::install'
-  include_recipe 'auditd::configure'
-  include_recipe 'auditd::service'
+pkgs = [
+  'audit',
+  'audit-audispd-plugins'
+]
+
+pkgs.each do |p|
+  zypper_package p do
+    allow_downgrade false
+    ignore_failure true
+    action :install
+  end
 end

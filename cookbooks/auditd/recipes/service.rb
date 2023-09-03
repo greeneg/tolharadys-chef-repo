@@ -1,6 +1,6 @@
 #
-# Cookbook:: auditd
-# Recipe:: default
+# Cookbook:: atd
+# Recipe:: service
 #
 # Copyright:: 2023, Gary Greene
 #
@@ -16,8 +16,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if platform?('opensuseleap')
-  include_recipe 'auditd::install'
-  include_recipe 'auditd::configure'
-  include_recipe 'auditd::service'
-end
