@@ -1,0 +1,19 @@
+{
+    "name": "nameserver",
+    "description": "This is the nameserver role in JSON format",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+        "avahi_daemon": {
+            "allow_interface": "eth1"
+        },
+        "features": {
+            "bundle_named": true,
+            "bundle_dhcpd": true
+        }
+    },
+    "run_list": [
+    ]
+}

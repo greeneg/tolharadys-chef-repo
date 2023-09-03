@@ -4,6 +4,10 @@
     "chef_type": "role",
     "json_class": "Chef::Role",
     "default_attributes": {
+        "features": {
+            "bundle_named": false,
+            "bundle_dhcpd": false
+        }
     },
     "override_attributes": {
     },
