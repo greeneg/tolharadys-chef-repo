@@ -74,9 +74,8 @@ function process_args {
 
     while true; do
         case "$1" in
-            -h | --help)
-                usage && exit 0 ;;
-            -v | --version) echo "Version $VERSION";;
+            -h | --help) usage && exit 0 ;;
+            -v | --version) echo "Version $VERSION" && exit 0 ;;
             -e) ENVIRONMENT=${2} && shift 2 ;; # environment is a single value
             -n) HOST_FQDN=${2} && shift 2 ;; # optional hostname for node to be assigned
             -r) ROLES=${2} && shift 2 ;; # roles are a comma delimited string that is passed as a single argument
