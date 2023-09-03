@@ -3,6 +3,7 @@
 set -e
 set -u
 set -o pipefail
+set -x
 
 if [[ "$EUID" -ne 0 ]]; then
   echo "Must be run with administrative rights. Exiting"
