@@ -77,29 +77,27 @@ ruby_block 'calculate repositories' do
   end
 end
 
-ruby_block 'add repositories' do
+ruby_block 'process repositories' do
   block do
+    repos = []
     Chef::Log.info "DEBUGGING: #{node.run_state['repo_groups']}"
-    if node.run_state['repo_groups'].length > 1
-      node.run_state['repo_groups'].each do |rg|
-        Chef::Log.info "Repository Group: #{rg}"
-        node['packages']['opensuse'][dist_version][rg]['repositories'].each do |r|
-          Chef::Log.info "Repository: #{r}"
-          repo = node['packages']['opensuse'][dist_version]['repo'][r]
-          zypper_repository node['packages']['opensuse'][dist_version]['repo'][r] do
-            autorefresh false
-            baseurl repo['url']
-            description repo['description']
-            enabled true
-            gpgautoimportkeys true
-            gpgcheck true
-            keeppackages false
-            priority repo['priority']
-            repo_name repo['name']
-            type repo['type']
-            action :create
-            not_if { ::File.exist?(repo['file_name']) }
-          end
+    node.run_state['repo_groups'].each do |rg|
+      Chef::Log.info "Repository Group: #{rg}"
+      node.default['packages']['opensuse'][dist_version][rg]['repositories'].each do |r|
+        Chef::Log.info "Repository: #{r}"
+        repo_info = node['packages']['opensuse'][dist_version]['repo'][r]
+        if ! File.exist?(repo_info['file_name'])
+          zypp_repo = Chef::Resource::ZypperRepository.new(repo_info['file_name'], run_context)
+          zypp_repo.autorefresh false
+          zypp_repo.baseurl repo_info['url']
+          zypp_repo.description repo_info['description']
+          zypp_repo.enabled true
+          zypp_repo.gpgautoimportkeys true
+          zypp_repo.gpgcheck true
+          zypp_repo.keeppackages false
+          zypp_repo.repo_name repo_info['name']
+          zypp_repo.type repo_info['type']
+          zypp_repo.action :create
         end
       end
     end

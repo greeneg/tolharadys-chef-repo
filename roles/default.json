@@ -12,10 +12,10 @@
     "override_attributes": {
     },
     "run_list": [
+        "packages::default",
         "authentication::default",
         "mounts::default",
         "networking::default",
-        "packages::default",
         "security::default",
         "services::default"
     ]

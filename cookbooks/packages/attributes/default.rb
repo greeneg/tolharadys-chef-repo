@@ -116,6 +116,7 @@ default['packages']['opensuse']['15.4']['core']['repositories'] = [
 ]
 default['packages']['opensuse']['15.4']['repo']['main-oss'] = {
     'autorefresh' => 0,
+    'r_name' => 'main-oss',
     'description' => 'Main OSS Repository',
     'enabled' => 1,
     'gpgcheck' => 0,
@@ -129,6 +130,7 @@ default['packages']['opensuse']['15.4']['repo']['main-oss'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['main-oss_-_updates'] = {
     'autorefresh' => 0,
+    'r_name' => 'main-oss_-_updates',
     'description' => 'Main OSS Update Repository',
     'enabled' => 1,
     'gpgcheck' => 0,
@@ -142,6 +144,7 @@ default['packages']['opensuse']['15.4']['repo']['main-oss_-_updates'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['main-non-oss'] = {
     'autorefresh' => 0,
+    'r_name' => 'main-non-oss',
     'description' => 'Main Non-OSS Repository',
     'enabled' => 1,
     'gpgcheck' => 0,
@@ -155,6 +158,7 @@ default['packages']['opensuse']['15.4']['repo']['main-non-oss'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['main-non-oss_-_updates'] = {
     'autorefresh' => 0,
+    'r_name' => 'main-non-oss_-_updates',
     'description' => 'Main Non-OSS Updates Repository',
     'enabled' => 1,
     'gpgcheck' => 0,
@@ -168,6 +172,7 @@ default['packages']['opensuse']['15.4']['repo']['main-non-oss_-_updates'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['repo-backports-update'] = {
     'autorefresh' => 0,
+    'r_name' => 'repo-backports-update',
     'description' => 'Update repository of openSUSE Backports',
     'enabled' => 1,
     'gpgcheck' => 0,
@@ -181,6 +186,7 @@ default['packages']['opensuse']['15.4']['repo']['repo-backports-update'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['repo-sle-update'] = {
     'autorefresh' => 0,
+    'r_name' => 'repo-sle-update',
     'description' => 'Update repository with updates from SUSE Linux Enterprise 15',
     'enabled' => 1,
     'gpgcheck' => 0,
@@ -194,6 +200,7 @@ default['packages']['opensuse']['15.4']['repo']['repo-sle-update'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['third_party_-_Google_Chrome'] = {
     'autorefresh' => 0,
+    'r_name' => 'third_party_-_Google_Chrome',
     'description' => 'Third Party - Google Chrome',
     'enabled' => 1,
     'gpgcheck' => 0,
@@ -207,6 +214,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Google_Chrome'] =
 }
 default['packages']['opensuse']['15.4']['repo']['third_party_-_Microsoft:Edge'] = {
     'autorefresh' => 0,
+    'r_name' => 'third_party_-_Microsoft:Edge',
     'description' => 'Third Party - Microsoft:Edge',
     'enabled' => 1,
     'gpgcheck' => 1,
