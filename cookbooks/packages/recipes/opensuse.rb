@@ -60,6 +60,14 @@ needed_packages = [
 
 # first, lets get our repos dealt with
 dist_version = platform_version
+
+# remove unwanted repo definitions
+node['packages']['opensuse'][dist_version]['unwanted_repo_definitions'].each do |f|
+  file f do
+    action :delete
+  end
+end
+
 ruby_block 'calculate repositories' do
   block do
     repo_group = []
