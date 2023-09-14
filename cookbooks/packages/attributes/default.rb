@@ -261,12 +261,12 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Microsoft:Teams']
 }
 default['packages']['opensuse']['15.4']['repo']['third_party_-_packman'] = {
     'autorefresh' => 0,
-    'description' => 'Third Party - PackMan'
+    'description' => 'Third Party - PackMan',
     'enabled' => 1,
     'gpgcheck' => 0,
     'gpgkey' = '',
     'keeppackages' => 0,
-    'name' => 'third-party-packman'
+    'name' => 'third-party-packman',
     'priority' => 85,
     'type' => 'rpm-md',
     'url' => 'http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.4/',
