@@ -85,20 +85,21 @@ end
 ruby_block 'process repositories' do
   block do
     repos = []
-    node.run_state['repo_groups'].each do |rg|
-      node.default['packages']['opensuse'][dist_version][rg]['repositories'].each do |r|
+    node.run_state['repo_groups'].each do |g|
+      node.default['packages']['opensuse'][dist_version][g]['repositories'].each do |r|
         repo_info = node['packages']['opensuse'][dist_version]['repo'][r]
-        if ! File.exist?(repo_info['file_name'])
-          Chef::Resource::ZypperRepository.new(repo_info['file_name'], run_context).tap do |zypp_repo|
-            zypp_repo.autorefresh false
-            zypp_repo.baseurl repo_info['url']
-            zypp_repo.description repo_info['description']
-            zypp_repo.enabled true
-            zypp_repo.gpgautoimportkeys true
-            zypp_repo.gpgcheck true
-            zypp_repo.keeppackages false
-            zypp_repo.repo_name repo_info['name']
-            zypp_repo.type repo_info['type']
+        if ! File.exist?("#{repo_info['file_name']}.repo")
+          Chef::Resource::ZypperRepository.new(repo_info['file_name'], run_context).tap do |z|
+            z.autorefresh repo_info['autorefresh']
+            z.baseurl repo_info['url']
+            z.description repo_info['description']
+            z.enabled repo_info['enabled']
+            z.gpgautoimportkeys repo_info['gpgautoimportkeys']
+            z.gpgcheck repo_info['gpgcheck']
+            z.keeppackages repo_info['keeppackages']
+            z.repo_name repo_info['name']
+            z.priority repo_info['priority']
+            z.type repo_info['type']
           end.run_action :create
         end
       end
