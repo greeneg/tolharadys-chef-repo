@@ -63,16 +63,13 @@ dist_version = platform_version
 ruby_block 'calculate repositories' do
   block do
     repo_group = []
-    Chef::Log.info "Distribution version: #{dist_version}"
     node['roles'].each do |n|
-      Chef::Log.info "Role: #{n}"
       if n == 'default'
         repo_group.push('core')
       else
         repo_group.push(n)
       end
     end
-    Chef::Log.info "repo_group: #{repo_group}"
     node.run_state['repo_groups'] = repo_group
   end
 end
@@ -80,11 +77,8 @@ end
 ruby_block 'process repositories' do
   block do
     repos = []
-    Chef::Log.info "DEBUGGING: #{node.run_state['repo_groups']}"
     node.run_state['repo_groups'].each do |rg|
-      Chef::Log.info "Repository Group: #{rg}"
       node.default['packages']['opensuse'][dist_version][rg]['repositories'].each do |r|
-        Chef::Log.info "Repository: #{r}"
         repo_info = node['packages']['opensuse'][dist_version]['repo'][r]
         if ! File.exist?(repo_info['file_name'])
           Chef::Resource::ZypperRepository.new(repo_info['file_name'], run_context).tap do |zypp_repo|
