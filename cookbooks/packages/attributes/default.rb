@@ -125,7 +125,7 @@ default['packages']['opensuse']['15.4']['repo']['main-oss'] = {
     'autorefresh' => false,
     'r_name' => 'main-oss',
     'description' => 'Main OSS Repository',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -139,7 +139,7 @@ default['packages']['opensuse']['15.4']['repo']['main-oss_-_updates'] = {
     'autorefresh' => false,
     'r_name' => 'main-oss_-_updates',
     'description' => 'Main OSS Update Repository',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -153,7 +153,7 @@ default['packages']['opensuse']['15.4']['repo']['main-non-oss'] = {
     'autorefresh' => false,
     'r_name' => 'main-non-oss',
     'description' => 'Main Non-OSS Repository',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -167,7 +167,7 @@ default['packages']['opensuse']['15.4']['repo']['main-non-oss_-_updates'] = {
     'autorefresh' => false,
     'r_name' => 'main-non-oss_-_updates',
     'description' => 'Main Non-OSS Updates Repository',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -181,7 +181,7 @@ default['packages']['opensuse']['15.4']['repo']['repo-backports-update'] = {
     'autorefresh' => false,
     'r_name' => 'repo-backports-update',
     'description' => 'Update repository of openSUSE Backports',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -195,7 +195,7 @@ default['packages']['opensuse']['15.4']['repo']['repo-sle-update'] = {
     'autorefresh' => false,
     'r_name' => 'repo-sle-update',
     'description' => 'Update repository with updates from SUSE Linux Enterprise 15',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -209,7 +209,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Google_Chrome'] =
     'autorefresh' => false,
     'r_name' => 'third_party_-_Google_Chrome',
     'description' => 'Third Party - Google Chrome',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -223,7 +223,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Microsoft:Edge'] 
     'autorefresh' => false,
     'r_name' => 'third_party_-_Microsoft:Edge',
     'description' => 'Third Party - Microsoft:Edge',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://packages.microsoft.com/keys/microsoft.asc',
     'keeppackages' => 0,
@@ -236,7 +236,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Microsoft:Edge'] 
 default['packages']['opensuse']['15.4']['repo']['third_party_-_Microsoft:Software:prod'] = {
     'autorefresh' => false,
     'description' => 'Third Party - Microsoft:Software:Prod',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -249,7 +249,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Microsoft:Softwar
 default['packages']['opensuse']['15.4']['repo']['third_party_-_Microsoft:Teams'] = {
     'autorefresh' => false,
     'description' => 'Third Party - Microsoft:Teams',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://packages.microsoft.com/keys/microsoft.asc',
     'keeppackages' => 0,
@@ -262,7 +262,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Microsoft:Teams']
 default['packages']['opensuse']['15.4']['repo']['third_party_-_packman'] = {
     'autorefresh' => false,
     'description' => 'Third Party - PackMan',
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -274,7 +274,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_packman'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['third_party_-_Skype-Stable'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => '',
     'keeppackages' => 0,
@@ -286,7 +286,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Skype-Stable'] = 
 }
 default['packages']['opensuse']['15.4']['repo']['third_party_-_Slack'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
     'priority' => 85,
     'type' => 'rpm-md',
@@ -295,7 +295,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Slack'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['third_party_-_Teamviewer'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://linux.teamviewer.com/pubkey/currentkey.asc',
     'keeppackages' => 0,
@@ -307,7 +307,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Teamviewer'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['third_party_-_Vivaldi'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
     'priority' => 85,
     'type' => 'rpm-md',
@@ -316,7 +316,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_Vivaldi'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['third_party_-_VLC'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'http://download.videolan.org/SuSE/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -327,7 +327,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_VLC'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['third_party_-_VSCode'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 0,
     'gpgkey' => 'https://packages.microsoft.com/keys/microsoft.asc',
     'keeppackages' => 0,
@@ -338,7 +338,7 @@ default['packages']['opensuse']['15.4']['repo']['third_party_-_VSCode'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Archiving'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/Archiving/openSUSE_Leap_15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -349,7 +349,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Archiving'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Artwork:Wallpapers'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/artwork:/wallpapers/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -360,7 +360,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Artwork:Wallpapers'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Go'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/devel:/languages:/go/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -371,7 +371,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Go'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:NodeJS'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/devel:/languages:/nodejs/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -382,7 +382,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:NodeJS'] 
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Perl'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/devel:/languages:/perl/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -393,7 +393,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Perl'] = 
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Python'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/devel:/languages:/python/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -404,7 +404,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Python'] 
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Ruby:Extensions'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -415,7 +415,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Ruby:Exte
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Ruby'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/devel:/languages:/ruby/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -426,7 +426,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Ruby'] = 
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Tools'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 90,
@@ -436,7 +436,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Tools'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Editors'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/editors/openSUSE_Leap_15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -447,7 +447,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Editors'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Emulators'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/Emulators/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -458,7 +458,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Emulators'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Filesystems'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/filesystems/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -469,7 +469,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Filesystems'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Games'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/games/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -480,7 +480,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Games'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Games:Tools'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/games:/tools/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -491,7 +491,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Games:Tools'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Graphics'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/graphics/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -502,7 +502,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Graphics'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Hardware'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/hardware/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -513,7 +513,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Hardware'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_KDE:Applications'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 80,
@@ -523,7 +523,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_KDE:Applications'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_KDE:Extra'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 80,
@@ -533,7 +533,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_KDE:Extra'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_KDE:Frameworks5'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 80,
@@ -543,7 +543,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_KDE:Frameworks5'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_KDE:Qt5'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 80,
@@ -553,7 +553,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_KDE:Qt5'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Kernel:HEAD:Backport:KMP:Standard'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 90,
@@ -562,7 +562,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Kernel:HEAD:Backport:KMP:
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Kernel:HEAD:Backport:Standard'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 90,
@@ -571,7 +571,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Kernel:HEAD:Backport:Stan
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Kernel:Tools'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 90,
@@ -581,7 +581,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Kernel:Tools'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_LibreOffice:Factory'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 90,
@@ -591,7 +591,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_LibreOffice:Factory'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Mozilla'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/mozilla/openSUSE_Leap_15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -602,7 +602,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Mozilla'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Multimedia:Applications'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/multimedia:/apps/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -613,7 +613,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Multimedia:Applications']
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Multimedia:Libraries'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/multimedia:/libs/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -624,7 +624,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Multimedia:Libraries'] = 
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Network:IDM'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/network:/idm/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -635,7 +635,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Network:IDM'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Network:IM:Signal'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/network:/im:/signal/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -646,7 +646,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Network:IM:Signal'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Network:LDAP'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/network:/ldap/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -657,7 +657,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Network:LDAP'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Network'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/network/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -668,7 +668,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Network'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Network:Utilities'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/network:/utilities/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -679,7 +679,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Network:Utilities'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Office'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/Office/openSUSE_Leap_15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -690,7 +690,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Office'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Printing'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/Printing/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -701,7 +701,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Printing'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Publishing'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/Publishing/openSUSE_Leap_15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -712,7 +712,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Publishing'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Science'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/science/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -723,7 +723,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Science'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security:AppArmor'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security:/apparmor/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -734,7 +734,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security:AppArmor'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security:Forensics'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security:/forensics/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -745,7 +745,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security:Forensics'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security:IDM'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security:/idm/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -756,7 +756,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security:IDM'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security:KeePassXC'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security:/keepassxc/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -767,7 +767,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security:KeePassXC'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security:Logging'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security:/logging/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -778,7 +778,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security:Logging'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security:NetFilter'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security:/netfilter/openSUSE_Leap_15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -789,7 +789,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security:NetFilter'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security:Privacy'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security:/privacy/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -800,7 +800,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security:Privacy'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -811,7 +811,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security:SELinux'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security:/SELinux/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -822,7 +822,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security:SELinux'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Security:Stunnel'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/security:/Stunnel/openSUSE_Leap_15.4_standard/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -833,7 +833,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Security:Stunnel'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Database:PostgreSQL'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/server:/database:/postgresql/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -844,7 +844,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Database:PostgreSQ
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Database'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/server:/database/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -855,7 +855,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Database'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Server:DNS'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/server:/dns/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -866,7 +866,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:DNS'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Server:HTTP'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/server:/http/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -877,7 +877,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:HTTP'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Mail'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 90,
@@ -887,7 +887,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Mail'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Monitoring'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/server:/monitoring/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -898,7 +898,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Monitoring'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Server:PHP:Applications'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/server:/php:/applications/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -909,7 +909,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:PHP:Applications']
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Server:PHP:Extensions'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/server:/php:/extensions/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -920,7 +920,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:PHP:Extensions'] =
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Proxy'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/server:/proxy/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -931,7 +931,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:Proxy'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Shells'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/shells/openSUSE_Leap_15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -942,7 +942,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Shells'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:Antigen'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'http://download.opensuse.org/repositories/shells:/zsh-users:/antigen/SLE_15/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -953,7 +953,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:Antigen'
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:zsh-autosuggestions'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-autosuggestions/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -964,7 +964,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:zsh-auto
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:zsh-completions'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-completions/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -975,7 +975,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:zsh-comp
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:zsh-history-substring-search'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-history-substring-search/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -986,7 +986,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:zsh-hist
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:zsh-syntax-highlighting'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-syntax-highlighting/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -997,7 +997,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Shells:Zsh-users:zsh-synt
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_SystemManagement'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/systemsmanagement/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -1008,7 +1008,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_SystemManagement'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_System:PackageManager'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/system:/packagemanager/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -1019,7 +1019,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_System:PackageManager'] =
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Utilities'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/utilities/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -1030,7 +1030,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Utilities'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Virtualization:Containers'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'keeppackages' => 0,
 
     'priority' => 90,
@@ -1040,7 +1040,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Virtualization:Containers
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Virtualization'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/Virtualization/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -1051,7 +1051,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Virtualization'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Virtualization:Vagrant'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/Virtualization:/vagrant/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -1073,7 +1073,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Virtualization:VirtualBox
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_X11:Utilities'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/X11:/Utilities/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -1084,7 +1084,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_X11:Utilities'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_X11:XOrg'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/X11:/XOrg/openSUSE_Leap_15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -1095,7 +1095,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_X11:XOrg'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_YaST:Head'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgcheck' => 1,
     'gpgkey' => 'https://download.opensuse.org/repositories/YaST:/Head/15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
@@ -1106,7 +1106,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_YaST:Head'] = {
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Zypp:Head'] = {
     'autorefresh' => false,
-    'enabled' => 1,
+    'enabled' => true,
     'gpgkey' => 'https://download.opensuse.org/repositories/zypp:/SLE-15-SP4-Branch/openSUSE_Leap_15.4/repodata/repomd.xml.key',
     'keeppackages' => 0,
     'priority' => 90,
