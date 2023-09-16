@@ -61,6 +61,9 @@ needed_packages = [
 # first, lets get our repos dealt with
 dist_version = platform_version
 
+# first run the configuration of zypper
+include_recipe 'zypper::default'
+
 # remove unwanted repo definitions
 node['packages']['opensuse'][dist_version]['unwanted_repo_definitions'].each do |f|
   file f do

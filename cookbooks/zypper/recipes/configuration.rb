@@ -1,6 +1,6 @@
 #
 # Cookbook:: zypper
-# Recipe:: default
+# Recipe:: configuration
 #
 # Copyright:: 2023, Gary Greene
 #
@@ -16,6 +16,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if platform?('opensuseleap')
-  include_recipe 'zypper::configuration'
+cookbook_file '/etc/zypp/zypp.conf' do
+  owner 'root'
+  group 'root'
+  mode  '0644'
+  source 'zypp.conf'
+end
+
+cookbook_file '/etc/zypp/zypper.conf' do
+  owner 'root'
+  group 'root'
+  mode  '0644'
+  source 'zypper.conf'
 end
