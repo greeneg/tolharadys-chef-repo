@@ -54,7 +54,7 @@ MY_ROLES=
 for ROLE in $(jq -r .roles[] "${CINC_CODE_REPO}/node_assignments/${FQDN}.json"); do
   MY_ROLES+="role[$ROLE],"
 done
-if [[ "${#MY_ROLES[@]}" -eq 0 ]]; then
+if [[ "${MY_ROLES}" -eq "" ]]; then
   echo "ERROR: No Roles are assigned to machine! Exiting"
   exit 2
 fi
