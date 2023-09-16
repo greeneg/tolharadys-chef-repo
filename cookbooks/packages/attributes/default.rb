@@ -52,10 +52,10 @@ default['packages']['opensuse']['15.4']['development_workstation']['repositories
     'obs_-_Devel:Tools',
     'third_party_-_VSCode',
 ]
-default['packages']['opensuse']['15.4']['nameserver']['repositories'] = [
+default['packages']['opensuse']['15.4']['name_server']['repositories'] = [
     'obs_-_Server:DNS',
 ]
-default['packages']['opensuse']['15.4']['webserver']['repositories'] = [
+default['packages']['opensuse']['15.4']['web_server']['repositories'] = [
     'obs_-_Server:HTTP',
     'obs_-_Server:PHP:Applications',
     'obs_-_Server:PHP:Extensions'
@@ -64,19 +64,19 @@ default['packages']['opensuse']['15.4']['database_server']['repositories'] = [
     'obs_-_Server:Database',
     'obs_-_Server:Database:PostgreSQL'
 ]
-default['packages']['opensuse']['15.4']['mailserver']['repositories'] = [
+default['packages']['opensuse']['15.4']['mail_server']['repositories'] = [
     'obs_-_Server:Mail'
 ]
-default['packages']['opensuse']['15.4']['printserver']['repositories'] = [
+default['packages']['opensuse']['15.4']['print_server']['repositories'] = [
     'obs_-_Printing'
 ]
-default['packages']['opensuse']['15.4']['proxyserver']['repositories'] = [
+default['packages']['opensuse']['15.4']['proxy_server']['repositories'] = [
     'obs_-_Server:Proxy'
 ]
-default['packages']['opensuse']['15.4']['monitoringserver']['repositories'] = [
+default['packages']['opensuse']['15.4']['monitoring_server']['repositories'] = [
     'obs_-_Server:Monitoring'
 ]
-default['packages']['opensuse']['15.4']['securityhardening']['repositories'] = [
+default['packages']['opensuse']['15.4']['security_hardening']['repositories'] = [
     'obs_-_Security:Forensics',
     'obs_-_Security:Logging',
     'obs_-_Security:Privacy',

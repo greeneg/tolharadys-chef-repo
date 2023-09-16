@@ -1,6 +1,6 @@
 {
-    "name": "extended",
-    "description": "This is the extended role in JSON format",
+    "name": "security_hardening",
+    "description": "This is the security_hardening role in JSON format",
     "chef_type": "role",
     "json_class": "Chef::Role",
     "default_attributes": {

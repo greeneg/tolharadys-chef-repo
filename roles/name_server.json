@@ -1,6 +1,6 @@
 {
-    "name": "nameserver",
-    "description": "This is the nameserver role in JSON format",
+    "name": "name_server",
+    "description": "This is the name_server role in JSON format",
     "chef_type": "role",
     "json_class": "Chef::Role",
     "default_attributes": {

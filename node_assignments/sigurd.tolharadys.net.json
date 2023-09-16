@@ -1,10 +1,6 @@
 {
   "environment": "prod",
   "roles": [
-    "default",
-    "desktop",
-    "extended",
-    "development_workstation",
-    "virtualization"
+    "default"
   ]
 }

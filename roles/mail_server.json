@@ -1,6 +1,6 @@
 {
-    "name": "extended",
-    "description": "This is the extended role in JSON format",
+    "name": "mail_server",
+    "description": "This is the mail_server role in JSON format",
     "chef_type": "role",
     "json_class": "Chef::Role",
     "default_attributes": {

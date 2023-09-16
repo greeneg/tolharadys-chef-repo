@@ -1,0 +1,6 @@
+{
+    "environment": "dev",
+    "roles": [
+        "default"
+    ]
+}
