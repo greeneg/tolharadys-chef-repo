@@ -23,6 +23,18 @@ function get_os_family {
   fi
 }
 
+function running_as_root_check {
+  if [[ $(id -u) != 0 ]]; then
+    echo "ERROR: Must be run with superuser rights! Exiting"
+    exit 1
+  fi
+}
+
+running_as_root_check
+
+umask 0022
+PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+
 echo "INFO: Entering working directory"
 if [[ "$(get_os_family)" == 'debian' ]]; then
   if [[ ! -d /var/empty ]]; then
@@ -61,6 +73,7 @@ fi
 
 echo "INFO: Executing CinC run"
 cd $CINC_CODE_REPO
+update_cookbook_code
 /opt/cinc/bin/cinc-client -z -c /etc/cinc/client.rb -P /run/cinc-zero.pid -E "$CINC_ENVIRONMENT" -l info -r "${MY_ROLES}"
 
 echo "INFO: CinC run completed"
