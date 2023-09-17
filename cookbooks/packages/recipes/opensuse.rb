@@ -114,7 +114,7 @@ execute 'zypper ref' do
   command '/usr/bin/zypper --gpg-auto-import-keys --no-color ref'
   cwd '/var/lib/empty'
   ignore_failure true
-  only_if { ::File.stat('/var/cache/zypp/raw').ctime < Time.now - 60*60*4 }
+#  only_if { ::File.stat('/var/cache/zypp/raw').ctime < Time.now - 60*60*4 }
 end
 
 needed_packages.each do |p|
