@@ -1,7 +1,10 @@
 {
     "environment": "dev",
     "roles": [
+        "database_server",
         "default",
+        "development_workstation",
+        "firewall",
         "mail_server",
         "monitoring_server",
         "name_server",
