@@ -111,7 +111,7 @@ ruby_block 'process repositories' do
 end
 
 execute 'zypper ref' do
-  command '/usr/bin/zypper ref'
+  command '/usr/bin/zypper --gpg-auto-import-keys --no-color ref'
   cwd '/var/lib/empty'
   ignore_failure true
   only_if { ::File.stat('/var/cache/zypp/raw').ctime < Time.now - 60*60*4 }
