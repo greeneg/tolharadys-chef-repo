@@ -1,6 +1,7 @@
 {
     "environment": "dev",
     "roles": [
-        "default"
+        "default",
+        "name_server"
     ]
 }
