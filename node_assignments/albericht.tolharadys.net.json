@@ -3,6 +3,7 @@
     "roles": [
         "default",
         "name_server",
+        "virtualization",
         "web_server"
     ]
 }
