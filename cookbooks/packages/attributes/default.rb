@@ -1066,7 +1066,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Virtualization:Vagrant'] 
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Virtualization:VirtualBox'] = {
     'autorefresh' => false,
-    'enabled' => 0,
+    'enabled' => false,
     'gpgcheck' => true,
     'gpgkey' => 'https://download.opensuse.org/repositories/Virtualization:/virtualbox/15.4/repodata/repomd.xml.key',
     'keeppackages' => false,
