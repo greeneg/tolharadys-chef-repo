@@ -2,6 +2,7 @@
     "environment": "dev",
     "roles": [
         "default",
-        "name_server"
+        "name_server",
+        "web_server"
     ]
 }
