@@ -70,13 +70,22 @@ default['packages']['opensuse']['15.4']['monitoring_server']['repositories'] = [
     'obs_-_Server:Monitoring'
 ]
 default['packages']['opensuse']['15.4']['security_hardening']['repositories'] = [
+    'obs_-_Security',
+    'obs_-_Security:AppArmor',
     'obs_-_Security:Forensics',
+    'obs_-_Security:IDM',
     'obs_-_Security:Logging',
     'obs_-_Security:Privacy',
+    'obs_-_Security:SELinux',
     'obs_-_Security:Stunnel'
 ]
 default['packages']['opensuse']['15.4']['firewall']['repositories'] = [
     'obs_-_Security:NetFilter',
+]
+default['packages']['opensuse']['15.4']['identity_server']['repositories'] = [
+    'obs_-_Network:IDM',
+    'obs_-_Network:LDAP',
+    'obs_-_Network:SAMBA:ADDC'
 ]
 default['packages']['opensuse']['15.4']['extended']['repositories'] = [
     'obs_-_Archiving',
@@ -87,21 +96,8 @@ default['packages']['opensuse']['15.4']['extended']['repositories'] = [
     'obs_-_Kernel:HEAD:Backport:Standard',
     'obs_-_Kernel:Tools',
     'obs_-_Network',
-    'obs_-_Network:IDM',
-    'obs_-_Network:LDAP',
     'obs_-_Network:Utilities',
-    'obs_-_Security',
-    'obs_-_Security:AppArmor',
-    'obs_-_Security:IDM',
-    'obs_-_Security:SELinux',
-    'obs_-_Shells',
-    'obs_-_Shells:Zsh-users:Antigen',
-    'obs_-_Shells:Zsh-users:zsh-autosuggestions',
-    'obs_-_Shells:Zsh-users:zsh-completions',
-    'obs_-_Shells:Zsh-users:zsh-history-substring-search',
-    'obs_-_Shells:Zsh-users:zsh-syntax-highlighting',
     'obs_-_System:PackageManager',
-    'obs_-_Utilities',
     'obs_-_YaST:Head',
     'obs_-_Zypp:Head',
     'third_party_-_Microsoft:Software:prod'
@@ -111,6 +107,13 @@ default['packages']['opensuse']['15.4']['core']['repositories'] = [
     'main-non-oss_-_updates',
     'main-oss',
     'main-oss_-_updates',
+    'obs_-_Shells',
+    'obs_-_Shells:Zsh-users:Antigen',
+    'obs_-_Shells:Zsh-users:zsh-autosuggestions',
+    'obs_-_Shells:Zsh-users:zsh-completions',
+    'obs_-_Shells:Zsh-users:zsh-history-substring-search',
+    'obs_-_Shells:Zsh-users:zsh-syntax-highlighting',
+    'obs_-_Utilities',
     'repo-backports-update',
     'repo-sle-update'
 ]
