@@ -2,7 +2,9 @@
     "environment": "dev",
     "roles": [
         "default",
+        "mail_server",
         "name_server",
+        "print_server",
         "virtualization",
         "web_server"
     ]
