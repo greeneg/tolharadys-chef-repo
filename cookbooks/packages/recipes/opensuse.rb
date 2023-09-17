@@ -103,6 +103,7 @@ ruby_block 'process repositories' do
             z.repo_name repo_info['name']
             z.priority repo_info['priority']
             z.type repo_info['type']
+            z.refresh_cache false
           end.run_action :create
         end
       end
