@@ -859,6 +859,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Server:DNS'] = {
     'gpgcheck' => true,
     'gpgkey' => 'https://download.opensuse.org/repositories/server:/dns/15.4/repodata/repomd.xml.key',
     'keeppackages' => false,
+    'gpgautoimportkeys' => true,
     'priority' => 90,
     'type' => 'rpm-md',
     'url' => 'https://download.opensuse.org/repositories/server:/dns/15.4/',
