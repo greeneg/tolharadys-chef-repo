@@ -3,6 +3,7 @@
 set -e
 set -u
 set -o pipefail
+set -x
 
 function update_cookbook_code {
   echo "INFO: Updating code repository"
