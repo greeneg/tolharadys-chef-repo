@@ -93,22 +93,22 @@ ruby_block 'process repositories' do
     node.run_state['repo_groups'].each do |g|
       node.default['packages']['opensuse'][dist_version][g]['repositories'].each do |r|
         repo_info = node['packages']['opensuse'][dist_version]['repo'][r]
-        if repo_info['autorefresh'] eq true
+        if repo_info['autorefresh'] == true
           z_autoref = 1
         else
           z_autoref = 0
         end
-        if repo_info['enabled'] eq true
+        if repo_info['enabled'] == true
           z_enable = 1
         else
           z_enable = 0
         end
-        if repo_info['gpgcheck'] eq true
+        if repo_info['gpgcheck'] == true
           z_gpgcheck = 1
         else
           z_gpgcheck = 0
         end
-        if repo_info['keeppackages'] eq true
+        if repo_info['keeppackages'] == true
           z_keeppackages = 1
         else
           z_keeppackages = 0
