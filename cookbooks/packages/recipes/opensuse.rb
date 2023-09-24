@@ -16,6 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+unifed_mode true
+
 needed_packages = [
   'acl',
   'attr',
@@ -91,19 +93,46 @@ ruby_block 'process repositories' do
     node.run_state['repo_groups'].each do |g|
       node.default['packages']['opensuse'][dist_version][g]['repositories'].each do |r|
         repo_info = node['packages']['opensuse'][dist_version]['repo'][r]
+        if repo_info['autorefresh'] eq true
+          z_autoref = 1
+        else
+          z_autoref = 0
+        end
+        if repo_info['enabled'] eq true
+          z_enable = 1
+        else
+          z_enable = 0
+        end
+        if repo_info['gpgcheck'] eq true
+          z_gpgcheck = 1
+        else
+          z_gpgcheck = 0
+        end
+        if repo_info['keeppackages'] eq true
+          z_keeppackages = 1
+        else
+          z_keeppackages = 0
+        end
         if ! File.exist?("#{repo_info['file_name']}.repo")
-          Chef::Resource::ZypperRepository.new(repo_info['file_name'], run_context).tap do |z|
-            z.autorefresh repo_info['autorefresh']
-            z.baseurl repo_info['url']
-            z.description repo_info['description']
-            z.enabled repo_info['enabled']
-            z.gpgautoimportkeys repo_info['gpgautoimportkeys']
-            z.gpgcheck repo_info['gpgcheck']
-            z.keeppackages repo_info['keeppackages']
-            z.repo_name repo_info['name']
-            z.priority repo_info['priority']
-            z.type repo_info['type']
-            z.refresh_cache false
+          Chef::Resource::Template.new(repo_info['name'], run_context).tap do |z|
+            z.cookbook 'packages'
+            z.path "/etc/zypp/repos.d/#{repo_info['file_name']}.repo"
+            z.source 'zypper_repo.erb'
+            z.mode repo_info['mode']
+            z.owner 'root'
+            z.group 'root'
+            z.variables(
+              :autorefresh z_autoref,
+              :enabled z_enable,
+              :gpgcheck z_gpgcheck,
+              :header repo_info['name'],
+              :keeppackages z_keeppackages,
+              :type repo_info['type'],
+              :key repo_info['gpgkey'],
+              :url repo_info['url'],
+              :priority repo_info['priority'],
+              :description repo_info['description']
+            )
           end.run_action :create
         end
       end
