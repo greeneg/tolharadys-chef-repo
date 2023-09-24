@@ -120,16 +120,16 @@ ruby_block 'process repositories' do
             z.owner 'root'
             z.group 'root'
             z.variables {
-              :autorefresh z_autoref,
-              :enabled z_enable,
-              :gpgcheck z_gpgcheck,
-              :header repo_info['name'],
-              :keeppackages z_keeppackages,
-              :type repo_info['type'],
-              :key repo_info['gpgkey'],
-              :url repo_info['url'],
-              :priority repo_info['priority'],
-              :description repo_info['description']
+              autorefresh: z_autoref,
+              enabled: z_enable,
+              gpgcheck: z_gpgcheck,
+              header: repo_info['name'],
+              keeppackages: z_keeppackages,
+              type: repo_info['type'],
+              key: repo_info['gpgkey'],
+              url: repo_info['url'],
+              priority: repo_info['priority'],
+              description: repo_info['description']
             }
           end.run_action :create
         end
