@@ -16,8 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-unifed_mode true
-
 needed_packages = [
   'acl',
   'attr',
