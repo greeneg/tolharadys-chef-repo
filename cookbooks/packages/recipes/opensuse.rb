@@ -111,6 +111,12 @@ ruby_block 'process repositories' do
         else
           z_keeppackages = 0
         end
+        z_name        = repo_info['name']
+        z_type        = repo_info['type']
+        z_key         = repo_info['gpgkey']
+        z_url         = repo_info['url']
+        z_priority    = repo_info['priority']
+        z_description = repo_info['description']
         if ! File.exist?("#{repo_info['file_name']}.repo")
           Chef::Resource::Template.new(repo_info['name'], run_context).tap do |z|
             z.cookbook 'packages'
@@ -123,13 +129,13 @@ ruby_block 'process repositories' do
               :autorefresh => z_autoref,
               :enabled => z_enable,
               :gpgcheck => z_gpgcheck,
-              :header => repo_info['name'],
+              :header => z_name,
               :keeppackages => z_keeppackages,
-              :type => repo_info['type'],
-              :key => repo_info['gpgkey'],
-              :url => repo_info['url'],
-              :priority => repo_info['priority'],
-              :description => repo_info['description']
+              :type => z_type,
+              :key => z_key,
+              :url => z_url,
+              :priority => z_priority,
+              :description => z_description
             }
           end.run_action :create
         end
