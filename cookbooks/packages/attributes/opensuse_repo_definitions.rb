@@ -385,7 +385,7 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Kernel:HEAD:Backport:Stan
     'autorefresh' => false,
     'enabled' => true,
     'gpgcheck' => true,
-    'gpgkey' = 'https://download.opensuse.org/repositories/Kernel:/HEAD:/Backport/standard/repodata/repomd.xml.key',
+    'gpgkey' => 'https://download.opensuse.org/repositories/Kernel:/HEAD:/Backport/standard/repodata/repomd.xml.key',
     'keeppackages' => false,
     'name' => 'obs-kernel-head-backport-standard',
     'priority' => 90,
