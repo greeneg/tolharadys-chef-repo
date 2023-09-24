@@ -125,7 +125,7 @@ ruby_block 'process repositories' do
             z.mode repo_info['mode']
             z.owner 'root'
             z.group 'root'
-            z.variables {
+            z.variables (
               :autorefresh => z_autoref,
               :enabled => z_enable,
               :gpgcheck => z_gpgcheck,
@@ -136,7 +136,7 @@ ruby_block 'process repositories' do
               :url => z_url,
               :priority => z_priority,
               :description => z_description
-            }
+            )
           end.run_action :create
         end
       end
