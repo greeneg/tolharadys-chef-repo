@@ -135,7 +135,7 @@ ruby_block 'process repositories' do
               :key => z_key,
               :url => z_url,
               :priority => z_priority,
-              :description => z_description
+              :description => z_description,
             )
           end.run_action :create
         end
