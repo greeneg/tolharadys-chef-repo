@@ -51,7 +51,7 @@ default['packages']['opensuse']['15.4']['repo']['main-non-oss_-_updates'] = {
     'name' => 'main-non-oss-updates',
     'priority' => 95,
     'type' => 'rpm-md',
-    'url' => 'http://download.opensuse.org/opensuse/update/leap/15.4/non-oss/',
+    'url' => 'http://download.opensuse.org/update/leap/15.4/non-oss/',
     'file_name' => 'main-non-oss_-_updates'
 }
 default['packages']['opensuse']['15.4']['repo']['repo-backports-update'] = {
