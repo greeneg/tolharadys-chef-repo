@@ -89,29 +89,36 @@ ruby_block 'process repositories' do
   block do
     repos = []
     node.run_state['repo_groups'].each do |g|
+      puts "REPO GROUP: #{g}"
       node.default['packages']['opensuse'][dist_version][g]['repositories'].each do |r|
+        puts "REPO DEFINITION: #{r}"
         repo_info = node['packages']['opensuse'][dist_version]['repo'][r]
         if repo_info['autorefresh'] == true
           z_autoref = 1
         else
           z_autoref = 0
         end
+        puts "REPO REFRESH: #{z_autoref}"
         if repo_info['enabled'] == true
           z_enable = 1
         else
           z_enable = 0
         end
+        puts "REPO ENABLED: #{z_enable}"
         if repo_info['gpgcheck'] == true
           z_gpgcheck = 1
         else
           z_gpgcheck = 0
         end
+        puts "REPO GPG CHECK: #{z_gpgcheck}"
         if repo_info['keeppackages'] == true
           z_keeppackages = 1
         else
           z_keeppackages = 0
         end
+        puts "REPO KEEP: #{z_keeppackages}"
         z_name        = repo_info['name']
+        puts "REPO NAME: #{z_name}"
         z_type        = repo_info['type']
         z_key         = repo_info['gpgkey']
         z_url         = repo_info['url']
