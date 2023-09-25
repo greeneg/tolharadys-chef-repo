@@ -118,27 +118,27 @@ ruby_block 'process repositories' do
         z_priority    = repo_info['priority']
         z_description = repo_info['description']
         if ! File.exist?("#{repo_info['file_name']}.repo")
-          Chef::Resource::Template.new(repo_info['name'], run_context) do |z|
+          var_hash = {
+            :autorefresh => z_autoref,
+            :enabled => z_enable,
+            :gpgcheck => z_gpgcheck,
+            :header => z_name,
+            :keeppackages => z_keeppackages,
+            :type => z_type,
+            :key => z_key,
+            :url => z_url,
+            :priority => z_priority,
+            :description => z_description,
+          }
+          Chef::Resource::Template.new(repo_info['name'], run_context).tap do |z|
             z.cookbook 'packages'
             z.path "/etc/zypp/repos.d/#{repo_info['file_name']}.repo"
             z.source 'zypper_repo.erb'
             z.mode repo_info['mode']
             z.owner 'root'
             z.group 'root'
-            z.variables (
-              :autorefresh => z_autoref,
-              :enabled => z_enable,
-              :gpgcheck => z_gpgcheck,
-              :header => z_name,
-              :keeppackages => z_keeppackages,
-              :type => z_type,
-              :key => z_key,
-              :url => z_url,
-              :priority => z_priority,
-              :description => z_description,
-            )
-            run_action :create
-          end
+            z.variables var_hash
+          end.run_action :create
         end
       end
     end
