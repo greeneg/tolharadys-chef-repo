@@ -36,17 +36,17 @@ default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Perl'] = 
     'url' => 'https://download.opensuse.org/repositories/devel:/languages:/perl/15.4/',
     'file_name' => 'obs_-_Devel:Languages:Perl'
 }
-default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Python'] = {
+default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Python:backports'] = {
     'autorefresh' => false,
     'enabled' => true,
     'gpgcheck' => true,
-    'gpgkey' => 'https://download.opensuse.org/repositories/devel:/languages:/python/15.4/repodata/repomd.xml.key',
+    'gpgkey' => 'https://download.opensuse.org/repositories/devel:/languages:/python:/backports/15.4/repodata/repomd.xml.key',
     'keeppackages' => false,
-    'name' => 'obs-devel-languages-python',
+    'name' => 'obs-devel-languages-python-backports',
     'priority' => 90,
     'type' => 'rpm-md',
-    'url' => 'https://download.opensuse.org/repositories/devel:/languages:/python/15.4/',
-    'file_name' => 'obs_-_Devel:Languages:Python'
+    'url' => 'https://download.opensuse.org/repositories/devel:/languages:/python:/backports/15.4/',
+    'file_name' => 'obs_-_Devel:Languages:Python:backports'
 }
 default['packages']['opensuse']['15.4']['repo']['obs_-_Devel:Languages:Ruby:Extensions'] = {
     'autorefresh' => false,
