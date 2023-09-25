@@ -39,7 +39,7 @@ default['packages']['opensuse']['15.4']['development_workstation']['repositories
     'obs_-_Devel:Languages:Go',
     'obs_-_Devel:Languages:NodeJS',
     'obs_-_Devel:Languages:Perl',
-    'obs_-_Devel:Languages:Python',
+    'obs_-_Devel:Languages:Python:backports',
     'obs_-_Devel:Languages:Ruby',
     'obs_-_Devel:Languages:Ruby:Extensions',
     'obs_-_Devel:Tools',
